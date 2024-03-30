@@ -1,5 +1,5 @@
 //
-//  AppApp.swift
+//  App.swift
 //  App
 //
 //  Created by Daichi Aoki on 2024/03/30.
