@@ -7,9 +7,9 @@ let package = Package(
   name: "Library",
   // MEMO: [Library]以外で公開したい場合に定義する
   products: [
-    //    .library(
-    //      name: "Network",
-    //      targets: ["Network"])
+    .library(
+      name: "AppFeature",
+      targets: ["AppFeature"])
   ],
   // MEMO: [Library]内で使用する外部パッケージがある場合に定義する
   dependencies: [
@@ -20,6 +20,11 @@ let package = Package(
   // MEMO: 各パッケージ同士の依存関係を定義する
   targets: [
     .target(
+      name: "AppFeature",
+      dependencies: [
+        "PokeSearchFeature"
+      ]),
+    .target(
       name: "Common"),
     .target(
       name: "Data",
@@ -29,14 +34,20 @@ let package = Package(
       dependencies: ["Common"]),
     .target(
       name: "Domain",
-      dependencies: ["Common", "Model", "Model"]),
+      dependencies: ["Common", "Data", "Model"]),
     .target(
       name: "Model",
       dependencies: ["Common"]),
     .target(
       name: "Network",
+      dependencies: ["Common", "Model"]),
+    .target(
+      name: "PokeSearchFeature",
       dependencies: [
-        "Common"
+        "Common",
+        "Designsystem",
+        "Domain",
+        "Model",
         // MEMO: 外部パッケージを依存する場合、以下のように定義する
         //        .product(name: "ComposableArchitecture", package: "swift-composable-architecture"),
       ]),
