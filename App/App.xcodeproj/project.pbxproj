@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		852214332BC9362B0066D430 /* Library in Resources */ = {isa = PBXBuildFile; fileRef = 852214322BC9362B0066D430 /* Library */; };
 		852B8CF52BB7FCA9006523BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B8CF42BB7FCA9006523BC /* App.swift */; };
 		852B8CF72BB7FCA9006523BC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B8CF62BB7FCA9006523BC /* ContentView.swift */; };
 		852B8CF92BB7FCAA006523BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B8CF82BB7FCAA006523BC /* Assets.xcassets */; };
 		852B8CFD2BB7FCAA006523BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 852B8CFC2BB7FCAA006523BC /* Preview Assets.xcassets */; };
+		85961A3D2BC94786008E1A44 /* AppFeature in Frameworks */ = {isa = PBXBuildFile; productRef = 85961A3C2BC94786008E1A44 /* AppFeature */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		852214322BC9362B0066D430 /* Library */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Library; path = ../Library; sourceTree = "<group>"; };
 		852B8CF12BB7FCA9006523BC /* App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852B8CF42BB7FCA9006523BC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		852B8CF62BB7FCA9006523BC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -27,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85961A3D2BC94786008E1A44 /* AppFeature in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -36,8 +40,10 @@
 		852B8CE82BB7FCA8006523BC = {
 			isa = PBXGroup;
 			children = (
+				852214322BC9362B0066D430 /* Library */,
 				852B8CF32BB7FCA9006523BC /* App */,
 				852B8CF22BB7FCA9006523BC /* Products */,
+				85961A3B2BC94786008E1A44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +75,13 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		85961A3B2BC94786008E1A44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,6 +98,9 @@
 			dependencies = (
 			);
 			name = App;
+			packageProductDependencies = (
+				85961A3C2BC94786008E1A44 /* AppFeature */,
+			);
 			productName = App;
 			productReference = 852B8CF12BB7FCA9006523BC /* App.app */;
 			productType = "com.apple.product-type.application";
@@ -127,6 +143,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				852214332BC9362B0066D430 /* Library in Resources */,
 				852B8CFD2BB7FCAA006523BC /* Preview Assets.xcassets in Resources */,
 				852B8CF92BB7FCAA006523BC /* Assets.xcassets in Resources */,
 			);
@@ -355,6 +372,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		85961A3C2BC94786008E1A44 /* AppFeature */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = AppFeature;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 852B8CE92BB7FCA8006523BC /* Project object */;
 }
